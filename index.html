@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshay Chandurkar Portfolio</title>
+
+    <link rel="stylesheet" href="Style/styles.css" />
+    <link rel="stylesheet" href="/script.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Akshay's Portfolio</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="first-section" id="home">
+        <div class="left-section">
+          <div>
+            Hi, My name is <span class="purple">Akshay Chandurkar</span>
+            and I am a Passionate
+          </div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="btn" onclick="downloadResume()">
+              <i class="fas fa-download"></i> Download Resume
+            </button>
+            
+            <a href="https://github.com/Akshaychanduakr11" target="_blank" class="btn">
+  <i class="fab fa-github"></i> Visit GitHub
+</a>
+
+          </div>
+        </div>
+        <div class="right-section">
+          <img src="assets/profile pic.jpg" alt="Profile" />
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="secondSection" id="experience">
+        <span class="text-grey">My journey and contributions</span>
+        <h1>Experience & Activities</h1>
+        <div class="box">
+          <div class="vertical">
+            <img
+              class="image-top"
+              src="https://cdn-icons-png.flaticon.com/512/3281/3281307.png"
+              alt="Internship"
+            />
+            <div class="vertical-title">Web Development Intern</div>
+            <div class="vertical-desc">
+              Completed a virtual internship focused on building responsive
+              websites using HTML, CSS, and JavaScript. Developed multiple
+              landing pages and enhanced UI/UX skills.
+            </div>
+          </div>
+          <div class="vertical">
+            <img
+              class="image-top"
+              src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png"
+              alt="Projects"
+            />
+            <div class="vertical-title">Personal Projects</div>
+            <div class="vertical-desc">
+              Built 5+ personal projects including e-commerce websites, clone
+              applications, and portfolio sites. Gained hands-on experience with
+              modern web technologies and best practices.
+            </div>
+          </div>
+          <div class="vertical">
+            <img
+              class="image-top"
+              src="https://cdn-icons-png.flaticon.com/512/3176/3176369.png"
+              alt="Learning"
+            />
+            <div class="vertical-title">Online Certifications</div>
+            <div class="vertical-desc">
+              Completed courses on Udemy, Coursera, and freeCodeCamp in Web
+              Development, and JavaScript. Continuously learning and staying
+              updated with industry trends.
+            </div>
+          </div>
+          <div class="vertical">
+            <img
+              class="image-top"
+              src="https://cdn-icons-png.flaticon.com/512/6062/6062646.png"
+              alt="Freelance"
+            />
+            <div class="vertical-title">Freelance Work</div>
+            <div class="vertical-desc">
+              Developed small websites for local businesses and helped friends
+              with their college projects. Gained real-world experience in
+              client communication and project delivery.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="thirdSection">
+        <div class="container">
+          <h1>Summary</h1>
+          <p>
+            Motivated and detail-oriented Computer Science and Engineering
+            graduate with a strong foundation in web development and
+            object-oriented programming. Proficient in front-end technologies
+            including HTML, CSS, and JavaScript, along with solid understanding
+            of Java for backend logic and application development. Eager to
+            apply technical skills in a collaborative environment to build
+            user-friendly and responsive applications. Quick learner with a
+            passion for coding, problem-solving, and continuous improvement.
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="fourthSection" id="education">
+        <div class="education-container">
+          <span class="text-grey"
+            >My academic background and continuous learning journey</span
+          >
+          <h1>Education</h1>
+          <div class="education-grid">
+            <!-- Card 1: B.Tech -->
+            <div class="education-card">
+              <div class="education-icon">🎓</div>
+              <div class="education-badge">🏆</div>
+              <span class="education-date">2022 - 2026</span>
+              <h3>B.Tech in Computer Science</h3>
+              <p class="institution">
+                Rashtrasant Tukadoji Maharaj Nagpur University
+              </p>
+              <div class="score">
+                <i class="fas fa-star" style="color: var(--primary-color)"></i>
+                <strong>CGPA: 8.4</strong> / 10
+              </div>
+            </div>
+
+            <!-- Card 2: HSC -->
+            <div class="education-card">
+              <div class="education-icon">📚</div>
+              <div class="education-badge">⭐</div>
+              <span class="education-date">2021 - 2022</span>
+              <h3>HSC (General Science)</h3>
+              <p class="institution">Maharashtra State Board – 12th Grade</p>
+              <div class="score">
+                <i
+                  class="fas fa-certificate"
+                  style="color: var(--primary-color)"
+                ></i>
+                <strong>Percentage: 70.67%</strong>
+              </div>
+            </div>
+
+            <!-- Card 3: SSC -->
+            <div class="education-card">
+              <div class="education-icon">📖</div>
+              <div class="education-badge">✨</div>
+              <span class="education-date">2019 - 2020</span>
+              <h3>SSC</h3>
+              <p class="institution">Maharashtra State Board – 10th Grade</p>
+              <div class="score">
+                <i class="fas fa-award" style="color: var(--primary-color)"></i>
+                <strong>Percentage: 88.80%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="fifthSection" id="projects">
+  <div class="project-container">
+    <span class="text-grey">
+      A showcase of my recent work and personal projects
+    </span>
+    <h1>Projects</h1>
+
+    <div class="grid-container">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>E-commerce Website</h3>
+        <p>
+          A responsive e-commerce platform with product listings and
+          shopping cart functionality.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+        <a href="#" onclick="openDemoModal(event)">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        |
+        <a onclick="event.preventDefault()" class="disabled">
+  <i class="fab fa-github"></i> Source Code (Coming Soon)
+</a>
+
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>YouTube Clone Page</h3>
+        <p>
+          A front-end replica of YouTube's interface with navigation and
+          video thumbnails.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+        <a href="#" onclick="openDemoModal(event)">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        |
+        <a onclick="event.preventDefault()" class="disabled">
+  <i class="fab fa-github"></i> Source Code (Coming Soon)
+</a>
+
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>Developer Portfolio</h3>
+        <p>
+          A modern portfolio website showcasing projects and skills with
+          responsive design and smooth animations.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+        <a href="#" onclick="openDemoModal(event)">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        |
+       <a onclick="event.preventDefault()" class="disabled">
+  <i class="fab fa-github"></i> Source Code (Coming Soon)
+</a>
+
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3>Question Query Bank</h3>
+        <p>
+          A question bank repository organized by topic, difficulty, and
+          format for exam preparation.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+        </div>
+        <a href="#" onclick="openDemoModal(event)">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        |
+       <a onclick="event.preventDefault()" class="disabled">
+  <i class="fab fa-github"></i> Source Code (Coming Soon)
+</a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Reusable Modal (for all projects) -->
+<div id="demoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeDemoModal()">&times;</span>
+    <h3>🚧 Live Demo Coming Soon</h3>
+    <p>This project is still under development. Stay tuned!</p>
+  </div>
+</div>
+
+
+      <hr />
+
+      <section class="skills-section" id="skills">
+        <span class="text-grey"
+          >The Skills That Shape My Code and Creations</span
+        >
+        <h1>Technical Skills</h1>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Languages</h3>
+            <ul>
+              <li><i class="fab fa-html5"></i> HTML5</li>
+              <li><i class="fab fa-css3-alt"></i> CSS3</li>
+              <li><i class="fab fa-js-square"></i> JavaScript</li>
+              <li><i class="fab fa-java"></i> Java</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> Frameworks</h3>
+            <ul>
+              <li><i class="fab fa-react"></i> React</li>
+              <li><i class="fab fa-node-js"></i> Node.js</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+            <ul>
+              <li><i class="fab fa-git-alt"></i> Git</li>
+              <li><i class="fas fa-code"></i> VS Code</li>
+              <li><i class="fab fa-figma"></i> Figma</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+  <div>Akshay's Developer</div>
+   <div> Portfolio</div>
+   </div>
+      <div class="footer-second">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <p><i class="fas fa-envelope"></i>  akshaychandurkar11@gmail.com</p>
+        <p><i class="fas fa-phone"></i> 7499747537</p>
+      </div>
+      <ul>
+        <li>
+          <a
+            href="https://linkedin.com/in/akshay-chandurkar-90b31224b"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/akshaychandurkar11"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </li>
+      </ul>
+      <div class="footer-rights">
+        Copyright &#169; akshaysportfolio.com | All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Designer", "Web Developer", "Full Stack Dveloper"],
+        typeSpeed: 40,
+      });
+    </script>
+    <script>
+      function downloadResume() {
+       const link = document.createElement("a");
+link.href = "resume.pdf";          // path to file in your project folder
+link.download = "Akshay_Chandurkar_Resume.pdf";
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+      }
+    </script>
+    <script src="js/script.js"></script>
+       
+   
+<script>
+  function openDemoModal(event) {
+    event.preventDefault();
+    document.getElementById("demoModal").style.display = "block";
+  }
+
+  function closeDemoModal() {
+    document.getElementById("demoModal").style.display = "none";
+  }
+
+  // Optional: close when clicking outside modal
+  window.onclick = function(event) {
+    const modal = document.getElementById("demoModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+
+  </body>
+</html>

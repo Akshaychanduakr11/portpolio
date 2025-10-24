@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./Style/contact.css" />
+  <title>Contact Me</title>
+
+  <!-- EmailJS SDK -->
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "a8KdWUZH37imok2WG",
+      });
+   })();
+</script>
+</head>
+
+<body>
+  <section class="contact-section" id="contact">
+    <h2>Contact Me</h2>
+    <p class="contact-subtitle">Have a question or want to work together? Reach out!</p>
+
+    <div class="contact-container">
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <p id="status"></p>
+
+      <div class="contact-details">
+        <p>
+          <img src="https://img.icons8.com/ios-glyphs/30/007bff/email.png" alt="Email" width="20" />
+          akshaychandurkar11@gmail.com
+        </p>
+        <p>
+          <img src="https://img.icons8.com/ios-glyphs/30/007bff/phone.png" alt="Phone" width="20" />
+          +91 7499747537
+        </p>
+        <p>
+          <img src="https://img.icons8.com/ios-glyphs/30/007bff/linkedin.png" alt="LinkedIn" width="20" />
+          <a href="https://linkedin.com/in/akshay-chandurkar-90b31224b" target="_blank">LinkedIn</a>
+        </p>
+        <p>
+          <img src="https://img.icons8.com/ios-glyphs/30/007bff/github.png" alt="GitHub" width="20" />
+          <a href="https://github.com/Akshaychanduakr11" target="_blank">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('contactForm');
+    const statusMsg = document.getElementById('status');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      statusMsg.textContent = "⏳ Sending...";
+      statusMsg.style.color = "black";
+
+      // First, send feedback to yourself
+      emailjs.sendForm('service_kyn7xbn', 'template_lxskwoc', form)
+        .then(function (response) {
+          console.log('✅ Feedback email sent:', response.status, response.text);
+
+          // Then send thank-you email to user
+          const userEmail = form.email.value;
+          const userName = form.name.value;
+
+          emailjs.send('service_kyn7xbn', 'template_uwxrk21', {
+            userEmail: userEmail,   // match EmailJS field
+            userName: userName      // match EmailJS field
+          })
+          .then(function (response2) {
+            console.log('✅ Thank-you email sent:', response2.status, response2.text);
+            statusMsg.textContent = "✅ Message has been sent successfully.Thanks for reaching out!";
+            statusMsg.style.color = "green";
+            form.reset();
+          })
+          
+        })
+        .catch(function (error) {
+          console.error('❌ Failed to send feedback email:', error);
+          statusMsg.textContent = "❌ Failed to send message. Please try again later.";
+          statusMsg.style.color = "red";
+        });
+    });
+  });
+</script>
+</body>
+</html>
